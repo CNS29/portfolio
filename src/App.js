@@ -7,7 +7,7 @@ import "./App.css";
 
 const App = () => {
     return (
-        <Router>
+        <Router basename="portfolio">
             <div className="App">
                 <div className="container">
                     <div className="row height-container">

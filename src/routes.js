@@ -14,7 +14,7 @@ const routes = [
         main: () => <Resume />
     },
     {
-        path: "/",
+        path: "/projects",
         exact: false,
         main: () => <Projects />
     },
