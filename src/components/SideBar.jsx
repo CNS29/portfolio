@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const SideBar = () => {
     const handleEmail = () => {
         window.open("mailto:canhnguyena2@gmail.com");
     }
+
     const handleDarkMode = (e) => {
-        console.log(1);
         const isCheck = e.target.checked; 
         isCheck ? document.body.classList.add("light"): document.body.classList.remove("light");
+        localStorage.setItem("mode", isCheck);
     }
+
+    useEffect(() => {
+        const isCheck = JSON.parse(localStorage.getItem("mode"));
+        if(isCheck) {
+            document.body.classList.add("light");
+            document.querySelector(".cb-modify").checked = true;
+        }else {
+            document.body.classList.remove("light");
+        }
+    }, [])
     return (
         <div className="sidebar">
             <img src="https://t4.ftcdn.net/jpg/03/73/72/47/360_F_373724750_qLVkvkQ8iIyCWi73jOiLTYM42v40KUJ0.jpg" alt="avatar" className="sidebar__avatar" />
