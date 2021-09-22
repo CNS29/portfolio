@@ -6,7 +6,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const currentURL = window.location.href;
-        if(currentURL.endsWith("/")) {
+        if(currentURL.endsWith("/portfolio")) {
             setLabel("About");
         }else if(currentURL.endsWith("/resume")) {
             setLabel("Resume");
