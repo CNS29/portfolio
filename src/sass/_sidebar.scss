@@ -1,0 +1,125 @@
+.sidebar {
+    background-color: var(--grey-color);
+    height: 100%;
+    border-radius: 20px;
+    padding: 25px 15px;
+    box-shadow: -18px -17px 0px 0px var(--shadow-color);
+    text-align: center;
+    position: relative;
+    &__avatar {
+        width: 110px;
+        height: 110px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 100%;
+        margin: auto;
+    }
+    &__icon {
+        font-size: 2.5rem;
+        margin-right: 12px;
+    }
+    &__name {
+        margin: 20px 0;
+        font-size: 2.8rem;
+        font-style: italic;
+        span {
+            color: var(--teal-color);
+        }
+    }
+    &__item {
+        font-size: 1.5rem;
+        border-radius: 30px;
+        height: 40px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__title {
+        background-color: var(--shadow-color);
+    }
+    &__resume {
+        margin: 6px 0;
+        border-radius: 30px;
+        transition: 0.2s ease;
+        &:hover {
+            background-color: var(--shadow-color);
+            color: var(--teal-color);
+        }
+    }
+    &__social-icon {
+        margin: 25px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .sidebar__icon {
+            margin: 0 12px;
+            transition: 0.1s ease-in-out;
+            &:hover {
+                transform: scale(1.2);
+                color: var(--teal-color);
+            }
+        }
+    }
+    &__contact {
+        margin: 0 -15px;
+        padding: 15px 0;
+        background-color: var(--shadow-color);
+        .sidebar__item {
+            margin-bottom: 6px;
+        }
+        &-github {
+            transition: 0.2s ease;
+            &:hover {
+                background-color: var(--grey-color);
+                color: var(--teal-color);
+            }
+        }
+    }
+    &__email {
+        background-color: var(--blue-color);
+        margin-top: 15px;
+        cursor: pointer;
+        transition: 0.1s ease-out;
+        &:hover {
+            background-color: var(--shadow-color);
+        }
+    }
+    &__modify {
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+        border-radius: 20px;
+        overflow: hidden;
+        &-container {
+            width: 40px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: var(--black-color);
+            position: relative;
+            i {
+                font-size: 1.2rem;
+            }
+            .circle {
+                position: absolute;
+                top: 2px;
+                right: 2px;
+                width: 16px;
+                height: 16px;
+                background-color: var(--teal-color);
+                border-radius: 100%;
+                cursor: pointer;
+                transition: 0.2s linear;
+            }
+            .cb-modify {
+                display: none;
+    
+                &:checked ~ .circle {
+                    transform: translateX(-20px);
+                }
+            }
+        }
+    }
+}

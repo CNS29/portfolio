@@ -1,0 +1,77 @@
+.projects {
+    height: 75vh;
+    overflow: hidden;
+    .container {
+        padding: 0 15px;
+    }
+    &__navbar {
+        margin: 20px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        font-size: 1.6rem;
+        li {
+            margin-right: 20px;
+            transition: .2s ease;
+            user-select: none;
+            &:hover {
+                color: var(--teal-color);
+            }
+        }
+        &--active {
+            color: var(--teal-color);
+        }
+    }
+    &__container {
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 100%;
+    }
+}
+
+.project-card {
+    margin-bottom: 20px;
+    animation: fadeInToOut .5s ease-out;
+    @keyframes fadeInToOut {
+        0%{
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    &__link {
+        overflow: hidden;
+        border: 1px solid var(--blue-color);
+        border-radius: 10px;
+    }
+    &__image {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        object-position: center;
+        transition: .4s ease-out;
+        &:hover {
+            transform: scale(1.12);
+        }
+    }
+    &__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        font-size: 1.3rem;
+        padding: 0 5px;
+        p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-left: 10px;
+        }
+    }
+    &__icon {
+        min-width: 25px;
+        height: 25px;
+    }
+}

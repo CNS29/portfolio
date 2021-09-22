@@ -1,0 +1,24 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    &__active {
+        font-size: 2.5rem;
+        border-bottom: 4px solid var(--teal-color);
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__item {
+        margin-left: 20px;
+        cursor: pointer;
+        transition: .1s ease;
+        &:hover {
+            color: var(--teal-color);
+        }
+    }
+}

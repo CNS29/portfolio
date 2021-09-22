@@ -1,0 +1,40 @@
+.height-container {
+    height: 90vh;
+    margin: 5vh 0;
+}
+.content__section {
+    padding: 20px 0;
+    animation: fadeInToOut 0.4s ease-in-out;
+}
+
+@keyframes fadeInToOut {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $shadown;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $black;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(131, 129, 129);
+  }
+  

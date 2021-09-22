@@ -1,0 +1,48 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.4;
+    box-sizing: border-box;
+    font-family: $font-family;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+button {
+    border: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
